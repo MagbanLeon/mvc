@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class finalBattle implements GameView{
-    public String roomTrial(int currentHealth){
-        System.out.println("Current health is " + currentHealth + "HP. Fight boss?");
+    public int roomTrial(int currentHealth){
+        System.out.println("Current health is " + currentHealth + "HP. Fight boss? [1 - yes, 0 - no]");
 
         Scanner s = new Scanner(System.in);
-        String s1 = s.nextLine();
+        int s1 = s.nextInt();
 
-        if(s1 == s1){
+        if(s1 == 1){
             System.out.println("Fighting the boss!");
         }else{
             System.out.println("Left boss.");

@@ -27,7 +27,7 @@ public class GameController{
     }
     public void interaction(){
         do{
-            String otherDecision = currentView.roomTrial(getPlayerHealth());
+            int otherDecision = currentView.roomTrial(getPlayerHealth());
             update(otherDecision);
             if((currentRoom == "fb")&&(otherDecision == otherDecision)){
                 win = currentView.fight((getPlayerShield())&&(getExcelSword()));
@@ -50,17 +50,17 @@ public class GameController{
             }
         }while(!win);
     }
-    public void update(String decision){
+    public void update(int decision){
         if(currentRoom == "woods"){
-            if(decision == "y"){player.setHasOKsword(true);}
+            if(decision == 1){player.setHasOKsword(true);}
             else{player.setHealth(getPlayerHealth() - 1);}
             map.theWoods = true;
         }else if(currentRoom == "pond"){
-            if(decision == "y"){player.setHasShield(true);}
+            if(decision == 1){player.setHasShield(true);}
             else{player.setHealth(getPlayerHealth() - 1);}
             map.thePond = true;
         }else if(currentRoom == "rock"){
-            if(decision == "y"){player.setHasExcelSword(true);}
+            if(decision == 1){player.setHasExcelSword(true);}
             else{player.setHealth(getPlayerHealth() - 1);}
             map.theRock = true;
         }else{

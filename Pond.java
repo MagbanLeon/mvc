@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Pond implements GameView{
-    public String roomTrial(int currentHealth){
-        System.out.println("Current health is " + currentHealth + "HP. The Pond, take shield?");
+    public int roomTrial(int currentHealth){
+        System.out.println("Current health is " + currentHealth + "HP. The Pond, take shield? [1 - yes, 0 - no]");
 
         Scanner s = new Scanner(System.in);
-        String s1 = s.nextLine();
+        int s1 = s.nextInt();
 
-        if(s1 == s1){
+        if(s1 == 1){
             System.out.println("Took shield!");
         }else{
             System.out.println("Left shield, injured for 10 HP");

@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Woods implements GameView{
-    public String roomTrial(int currentHealth){
-        System.out.println("Current health is " + currentHealth + "HP. The Woods, take OK sword?");
+    public int roomTrial(int currentHealth){
+        System.out.println("Current health is " + currentHealth + "HP. The Woods, take OK sword? [1 - yes, 0 - no]");
 
         Scanner s = new Scanner(System.in);
-        String s1 = s.nextLine();
-        System.out.println(s1);
+        int s1 = s.nextInt();
+        
         if(s1 == s1){
             System.out.println("Took OK sword!");
         }else{
